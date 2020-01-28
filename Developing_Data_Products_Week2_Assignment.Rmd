@@ -1,6 +1,5 @@
 ---
 title: "Developing Data Products Assignment Week2"
-author: "Amol Nankar"
 date: "February 1, 2017"
 output: html_document
 ---
