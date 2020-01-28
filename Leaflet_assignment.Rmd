@@ -1,0 +1,40 @@
+---
+title: "Developing Data Products Week2 Assignment"
+author: "Dipali Bagad"
+date: "September 7, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Assignment is to Create a web page using R Markdown that features a map created with Leaflet.
+
+```{r echo=TRUE}
+library(leaflet)
+library(dplyr)
+set.seed(2017-09-07)
+
+df <- data.frame(lat= runif(10, min=33.58, max=33.60),
+                 lng=runif(10, min=-101.90, max=-101.89))
+
+Lubbock_TTU_Area <- df %>%
+           leaflet() %>% 
+           addTiles() %>%
+           addMarkers(clusterOptions=markerClusterOptions())
+
+```
+
+## Including Map
+
+Embedding the Map
+
+```{r , echo=TRUE}
+Lubbock_TTU_Area
+```
+
+
